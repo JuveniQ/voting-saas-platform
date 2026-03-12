@@ -23,16 +23,17 @@ Create one GitHub Project called `Delivery`.
 
 Fields:
 
-- `Status`: Inbox, Ready, In Progress, In Review, Blocked, QA, Done
-- `Type`: Epic, Feature, Task, Bug, Spike, Ops
+- use built-in `Assignees` instead of a custom `Owner` field
+- keep the built-in `Status` field available for default GitHub workflows if needed
+- use custom `Workflow Status`: Inbox, Ready, In Progress, In Review, Blocked, QA, Done
+- use custom `Work Type`: Epic, Feature, Task, Bug, Spike, Ops
 - `Area`: Frontend, Design, Backend, Auth, Tenancy, Voting, Fraud, Analytics, Infra, Docs
 - `Priority`: P0, P1, P2, P3
 - `Size`: XS, S, M, L
-- `Owner`
 - `Iteration`
-- `Design Ready`
-- `API Ready`
-- `Risk`
+- `Design Ready`: No, Yes, N/A
+- `API Ready`: No, Yes, N/A
+- `Risk`: Low, Medium, High
 
 Suggested views:
 
@@ -61,10 +62,10 @@ Configure branch protection for `main`:
 - dismiss stale approvals on new commits
 - require conversation resolution before merge
 - require status checks:
-  - `CI / lint`
-  - `CI / typecheck`
-  - `CI / test`
-  - `CI / build`
+  - `lint`
+  - `typecheck`
+  - `test`
+  - `build`
 - block direct pushes
 - block force pushes
 - require linear history
