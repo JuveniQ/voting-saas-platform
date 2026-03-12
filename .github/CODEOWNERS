@@ -1,18 +1,9 @@
-# Replace the example owners below with real GitHub handles or team slugs
-# before enabling "Require review from Code Owners" in branch protection.
-#
-# Suggested team slugs:
-#   @your-org/cto
-#   @your-org/full-stack-lead
-#   @your-org/ui-ux-frontend-lead
-#
-# Example mappings:
-# * @your-org/full-stack-lead
-# /src/app/ @your-org/ui-ux-frontend-lead @your-org/full-stack-lead
-# /src/components/ @your-org/ui-ux-frontend-lead
-# /src/lib/auth/ @your-org/cto @your-org/full-stack-lead
-# /src/lib/db/ @your-org/cto @your-org/full-stack-lead
-# /src/lib/tenancy/ @your-org/cto @your-org/full-stack-lead
-# /src/app/api/ @your-org/cto @your-org/full-stack-lead
-# /docs/architecture/ @your-org/cto
-# /docs/security/ @your-org/cto
+* @Jayetheus @aytee-80
+/src/app/ @Ipeleng-Modise @aytee-80
+/src/components/ @Ipeleng-Modise
+/src/lib/auth/ @Jayetheus @aytee-80
+/src/lib/db/ @Jayetheus @aytee-80
+/src/lib/tenancy/ @Jayetheus @aytee-80
+/src/app/api/ @Jayetheus @aytee-80
+/docs/architecture/ @Jayetheus
+/docs/security/ @Jayetheus
