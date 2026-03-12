@@ -46,11 +46,13 @@ Then:
 - link the issue
 - attach screenshots for UI changes
 - note API or schema changes
+- disclose meaningful AI assistance and validation if AI was used
 - request the right reviewer
 
 ## If You Need More Detail
 
 - daily workflow: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- AI rules and templates: [`docs/ai/README.md`](./docs/ai/README.md)
 - first-day setup: [`docs/ops/onboarding.md`](./docs/ops/onboarding.md)
 - team expectations: [`docs/ops/working-agreement.md`](./docs/ops/working-agreement.md)
 - GitHub setup: [`docs/ops/github-setup-checklist.md`](./docs/ops/github-setup-checklist.md)

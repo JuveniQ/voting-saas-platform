@@ -21,6 +21,7 @@ This repository starts with the architecture and pre-development pack from the p
 
 - team entry point: [`START-HERE.md`](./START-HERE.md)
 - contribution guide: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+- AI governance pack: [`docs/ai/README.md`](./docs/ai/README.md)
 - security reporting: [`SECURITY.md`](./SECURITY.md)
 - onboarding guide: [`docs/ops/onboarding.md`](./docs/ops/onboarding.md)
 
@@ -53,6 +54,14 @@ The operating model for the four-person team lives in [`docs/ops`](./docs/ops):
 - [`qa-strategy.md`](./docs/ops/qa-strategy.md)
 - [`onboarding.md`](./docs/ops/onboarding.md)
 
+AI usage guidance lives in [`docs/ai`](./docs/ai):
+
+- [`ai-usage-policy.md`](./docs/ai/ai-usage-policy.md)
+- [`approved-tools-and-data-rules.md`](./docs/ai/approved-tools-and-data-rules.md)
+- [`prompting-standard.md`](./docs/ai/prompting-standard.md)
+- [`review-and-verification-checklist.md`](./docs/ai/review-and-verification-checklist.md)
+- [`task-risk-matrix.md`](./docs/ai/task-risk-matrix.md)
+
 Repository workflow files live under [`.github`](./.github), including issue forms, the pull request template, the CI workflow, and the CODEOWNERS template.
 
 ## Project Structure
@@ -72,6 +81,7 @@ src/
   lib/voting/           Phase engine, policy helpers, and vote ledger scaffolding
 docs/
   api/
+  ai/
   architecture/
   ops/
   product/

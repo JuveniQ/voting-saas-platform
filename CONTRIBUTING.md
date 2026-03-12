@@ -37,6 +37,15 @@ Before opening code changes:
 - behavior or process changes must update the relevant docs
 - do not merge with failing checks
 
+## AI-Assisted Work
+
+- read [`docs/ai/README.md`](./docs/ai/README.md) before using AI on repo work
+- only use approved AI tools and only with allowed data classes
+- never paste secrets, raw logs, tenant identifiers, or sensitive internal context into consumer tools
+- treat AI output like untrusted input until it is reviewed and validated
+- disclose meaningful AI assistance in the PR and note how the result was checked
+- do not use autonomous or broad-scope AI workflows for auth, tenancy, voting, fraud, schema, or payment changes without explicit CTO approval
+
 ## Branching and Commits
 
 - use short-lived branches
@@ -67,11 +76,13 @@ Examples:
 - never commit secrets, tokens, or private client information
 - never post sensitive values in issues, PRs, Discussions, or WhatsApp
 - use `.env.local`, GitHub environment secrets, or provider dashboards for secrets
+- never paste sensitive values into unapproved or consumer AI tools
 - read [`SECURITY.md`](./SECURITY.md) before reporting a security issue
 
 ## Need More Context?
 
 - product context: [`docs/product/prd.md`](./docs/product/prd.md)
 - API contracts: [`docs/api/openapi.yaml`](./docs/api/openapi.yaml)
+- AI governance: [`docs/ai/README.md`](./docs/ai/README.md)
 - onboarding: [`docs/ops/onboarding.md`](./docs/ops/onboarding.md)
 - QA expectations: [`docs/ops/qa-strategy.md`](./docs/ops/qa-strategy.md)

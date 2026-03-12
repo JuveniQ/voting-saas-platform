@@ -14,7 +14,8 @@ New team members need access to:
 
 1. read `README.md`
 2. read the docs under `docs/product`, `docs/architecture`, and `docs/security`
-3. read the team docs under `docs/ops`
+3. read the AI docs under `docs/ai`
+4. read the team docs under `docs/ops`
 4. clone the repo and install dependencies with `npm ci`
 5. copy `.env.example` to `.env.local`
 6. run:
@@ -27,6 +28,7 @@ New team members need access to:
 
 - join the `Delivery` project board
 - review the current sprint goal
+- review the approved AI tool rules and prompt templates before using AI on repo work
 - shadow one code review
 - pick one `XS` or `S` issue and ship it through the full PR workflow
 - add any onboarding gaps back into the repo docs
@@ -35,6 +37,7 @@ New team members need access to:
 
 - `docs/product/prd.md`
 - `docs/api/openapi.yaml`
+- `docs/ai/README.md`
 - `docs/ops/team-operating-model.md`
 - `docs/ops/working-agreement.md`
 - `docs/ops/github-setup-checklist.md`

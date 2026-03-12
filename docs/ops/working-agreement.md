@@ -6,6 +6,7 @@
 - use `GitHub` for all lasting decisions, scoped work, review comments, and release notes
 - summarize any WhatsApp decision into GitHub within 24 hours
 - never share secrets, tokens, or client-sensitive data in WhatsApp
+- never paste sensitive project context into consumer AI tools
 
 ## Delivery
 
@@ -22,6 +23,8 @@
 - UI changes need screenshots or video
 - behavior changes need docs updates where relevant
 - schema or API changes must update the contract docs
+- AI-assisted work must follow the rules in `docs/ai`
+- AI output never replaces human review or repo validation
 
 ## Collaboration
 
