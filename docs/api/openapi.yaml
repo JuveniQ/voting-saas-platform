@@ -1,0 +1,93 @@
+openapi: 3.1.0
+info:
+  title: Voting SaaS Platform API
+  version: 0.1.0
+servers:
+  - url: https://voting.company.com
+paths:
+  /api/v1/public/verifications/email/request:
+    post:
+      summary: Request an email OTP for voting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email]
+              properties:
+                email: { type: string, format: email }
+                purpose: { type: string, enum: [vote, admin-signin] }
+                tenantSlug: { type: string }
+                campaignId: { type: string, format: uuid }
+      responses:
+        "202":
+          description: OTP request accepted
+  /api/v1/public/verifications/email/confirm:
+    post:
+      summary: Confirm an email OTP and obtain a verification token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [requestId, email, otp]
+              properties:
+                requestId: { type: string, format: uuid }
+                email: { type: string, format: email }
+                otp: { type: string, minLength: 6, maxLength: 6 }
+      responses:
+        "200":
+          description: OTP verified
+  /api/v1/public/votes:
+    post:
+      summary: Submit a vote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [campaignId, categoryId, nomineeId, quantity, idempotencyKey]
+              properties:
+                campaignId: { type: string, format: uuid }
+                categoryId: { type: string, format: uuid }
+                nomineeId: { type: string, format: uuid }
+                quantity: { type: integer, minimum: 1 }
+                idempotencyKey: { type: string }
+                verificationToken: { type: string }
+                fingerprint: { type: string }
+      responses:
+        "202":
+          description: Vote accepted
+  /api/v1/admin/campaigns:
+    post:
+      summary: Create or stage a campaign
+      responses:
+        "202":
+          description: Contract accepted
+  /api/v1/admin/categories:
+    post:
+      summary: Create or stage a category
+      responses:
+        "202":
+          description: Contract accepted
+  /api/v1/admin/nominees:
+    post:
+      summary: Create or stage a nominee
+      responses:
+        "202":
+          description: Contract accepted
+  /api/v1/admin/rules:
+    post:
+      summary: Create or stage voting rules
+      responses:
+        "202":
+          description: Contract accepted
+  /api/v1/admin/exports:
+    post:
+      summary: Queue an export job
+      responses:
+        "202":
+          description: Export queued

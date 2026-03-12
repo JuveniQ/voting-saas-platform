@@ -1,0 +1,81 @@
+name: Bug
+description: Report a broken behavior with enough detail to reproduce it.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for defects affecting current behavior.
+        Add screenshots, logs, or request IDs where possible.
+  - type: input
+    id: summary
+    attributes:
+      label: Bug summary
+      placeholder: Vote confirmation screen loops after OTP success
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Sev 1 - platform down or data exposure
+        - Sev 2 - core flow broken
+        - Sev 3 - degraded but usable
+        - Sev 4 - minor issue
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Frontend
+        - Design
+        - Backend
+        - Auth
+        - Tenancy
+        - Voting
+        - Fraud
+        - Analytics
+        - Infra
+        - Docs
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current behavior
+      placeholder: OTP succeeds, but the next step never unlocks and the user stays on the same screen.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      placeholder: After successful OTP verification, the user can submit a vote.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open communitychoice.voting.company.com
+        2. Request email OTP
+        3. Confirm OTP
+        4. Observe that the vote action stays disabled
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, device, branch, and host if relevant.
+      placeholder: Chrome 135 on Android 14, local dev, localhost
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Logs, screenshots, request IDs, or traces.
+      placeholder: Include any screenshots or request IDs here.

@@ -1,0 +1,102 @@
+name: Feature
+description: Define a user-facing or platform feature before implementation.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for planned product or platform work.
+        After creation, add the issue to the `Delivery` project and set the remaining project fields.
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      description: Short outcome-focused title.
+      placeholder: Tenant admins can close voting and freeze leaderboards
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What user or business problem are we solving?
+      placeholder: Client admins need a controlled way to close voting and publish final results.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the expected user or system behavior.
+      placeholder: Admins can close a campaign, hide live results, and publish the locked final leaderboard.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Frontend
+        - Design
+        - Backend
+        - Auth
+        - Tenancy
+        - Voting
+        - Fraud
+        - Analytics
+        - Infra
+        - Docs
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0
+        - P1
+        - P2
+        - P3
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      description: If the work feels bigger than `L`, split it before implementation.
+      options:
+        - XS
+        - S
+        - M
+        - L
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: One per line.
+      placeholder: |
+        - Admin can close an active campaign
+        - Public vote endpoint rejects new votes after closure
+        - Final results export shows the locked totals
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and risks
+      description: List blockers, technical dependencies, or rollout risks.
+      placeholder: Depends on aggregate refresh job and campaign phase transitions.
+  - type: input
+    id: design-link
+    attributes:
+      label: Penpot link
+      description: Required if the feature affects UI.
+      placeholder: https://design.penpot.app/...
+  - type: textarea
+    id: api-impact
+    attributes:
+      label: API or schema impact
+      description: Note any endpoint, contract, or database changes.
+      placeholder: Update /api/v1/admin/campaigns and campaign phase schema.

@@ -1,0 +1,61 @@
+name: Spike
+description: Time-box research or uncertainty reduction before committing implementation work.
+title: "[Spike]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use a spike when the team needs a short investigation with a clear output.
+  - type: input
+    id: question
+    attributes:
+      label: Question to answer
+      placeholder: What is the best way to persist OTP attempts while preserving tenant isolation?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Why this matters now
+      placeholder: OTP persistence blocks the public voting flow and fraud checks.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output
+      description: What deliverable closes this spike?
+      placeholder: ADR update, recommendation, schema sketch, and implementation tickets.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Frontend
+        - Design
+        - Backend
+        - Auth
+        - Tenancy
+        - Voting
+        - Fraud
+        - Analytics
+        - Infra
+        - Docs
+    validations:
+      required: true
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox
+      description: Maximum investigation window.
+      placeholder: 4 hours
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Prevent the spike from turning into implementation work.
+      placeholder: No production code changes or migrations.

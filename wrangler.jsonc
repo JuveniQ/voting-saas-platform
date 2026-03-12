@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "voting-saas-platform",
+  "compatibility_date": "2026-03-10",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "voting-saas-platform"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "NEXT_INC_CACHE_R2_BUCKET",
+      "bucket_name": "voting-saas-platform-opennext-cache"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "vars": {
+    "PLATFORM_BASE_DOMAIN": "voting.company.com",
+    "PLATFORM_MARKETING_HOST": "voting.company.com",
+    "PLATFORM_APP_HOST": "app.voting.company.com",
+    "NEXT_PUBLIC_PLATFORM_NAME": "Voting SaaS Platform"
+  }
+}

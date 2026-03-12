@@ -1,0 +1,60 @@
+name: Incident or Ops
+description: Track production-impacting issues, urgent operational work, or follow-up actions.
+title: "[Incident]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for incidents, urgent operational tasks, or post-incident follow-up.
+        Create the issue as soon as the incident is acknowledged.
+  - type: input
+    id: summary
+    attributes:
+      label: Incident summary
+      placeholder: Public vote endpoint returns 500s for one tenant
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Sev 1
+        - Sev 2
+        - Sev 3
+        - Sev 4
+    validations:
+      required: true
+  - type: input
+    id: started-at
+    attributes:
+      label: Incident start time
+      description: Use SAST and include the date.
+      placeholder: 2026-03-12 14:20 SAST
+    validations:
+      required: true
+  - type: input
+    id: affected-scope
+    attributes:
+      label: Affected scope
+      description: Tenant, campaign, environment, or route.
+      placeholder: communitychoice tenant, /api/v1/public/votes, production
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      placeholder: New votes cannot be submitted for the affected campaign.
+    validations:
+      required: true
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Current mitigation or workaround
+      placeholder: Voting paused, incident message posted, rollback under review.
+  - type: textarea
+    id: follow-up
+    attributes:
+      label: Follow-up actions
+      placeholder: Root cause analysis, regression tests, runbook update.
